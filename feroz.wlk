@@ -12,6 +12,7 @@ object loboFeroz {
   }
 
   //Aumenta el pesos cuando come.-
+<<<<<<< HEAD
   method comer(personaje){
     peso = peso + (personaje.peso() * 0.1)
     
@@ -23,6 +24,19 @@ object loboFeroz {
   }
   // sufre una crisis y vuelve a su estado inicial.-
   method sufrirUnaCrisis (){
+=======
+  method comer(nuevaUnidad){
+    peso = peso + nuevaUnidad * 0.1
+    return peso
+  }
+  //Baja de peso cuando correr.
+  method corre(){
+    peso = peso - 1
+    return peso
+  }
+  // sufre una crisis y vuelve a su estado inicial.-
+  method intoxicacion (){
+>>>>>>> 137275acbf5ecfe797f9a73406ee3a797f05654d
     peso = 10
     return peso
   }
