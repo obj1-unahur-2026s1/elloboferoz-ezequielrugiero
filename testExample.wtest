@@ -1,0 +1,45 @@
+
+import caperucita.*
+import feroz.*
+import personajes.*
+describe "Describe todos los finales posible para el lobo Ferroz" {
+ test "Primer final posible, se come a la abuelita, la salud del lobo es" {
+    // corre al bosque y a casa de la abuelita
+    loboFeroz.correr()
+    loboFeroz.correr()
+    caperucita.pierdeUnaManzana()
+    loboFeroz.comer(abuelita)
+    // corre al bosque de nuevo
+    loboFeroz.correr()
+   assert.notThat(loboFeroz.estaSaludable())
+ }
+
+test "Segundo final posible, se come a la abuelita y acapelucita, la salud del lobo es" {
+    // corre al bosque y a casa de la abuelita
+    loboFeroz.correr()
+    loboFeroz.correr()
+    caperucita.pierdeUnaManzana()
+    loboFeroz.comer(abuelita)
+    loboFeroz.comer(caperucita)
+    // corre al bosque de nuevo
+    loboFeroz.correr()
+   assert.that(loboFeroz.estaSaludable())
+ }
+test "Tercer final posible, se come a todo los personajes, la salud del lobo es" {
+    // corre al bosque y a casa de la abuelita
+    loboFeroz.correr()
+    loboFeroz.correr()
+    caperucita.pierdeUnaManzana()
+    loboFeroz.comer(abuelita)
+    loboFeroz.comer(caperucita)
+    loboFeroz.comer(cazador)
+    // corre al bosque de nuevo
+    loboFeroz.correr()
+   assert.notThat(loboFeroz.estaSaludable())
+ } 
+ 
+
+}
+
+
+
