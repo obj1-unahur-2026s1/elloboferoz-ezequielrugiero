@@ -15,12 +15,13 @@ describe "Describe todos los finales posible para el lobo Ferroz" {
  }
 
 test "Segundo final posible, se come a la abuelita y acapelucita, la salud del lobo es" {
-    // corre al bosque y a casa de la abuelita
+  // corre al bosque y a casa de la abuelita
     loboFeroz.correr()
     loboFeroz.correr()
     caperucita.pierdeUnaManzana()
     loboFeroz.comer(abuelita)
     loboFeroz.comer(caperucita)
+    loboFeroz.comer(abuelita)
     // corre al bosque de nuevo
     loboFeroz.correr()
    assert.that(loboFeroz.estaSaludable())
@@ -38,7 +39,6 @@ test "Tercer final posible, se come a todo los personajes, la salud del lobo es"
    assert.notThat(loboFeroz.estaSaludable())
  } 
  
-
 }
 
 

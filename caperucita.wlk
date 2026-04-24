@@ -1,36 +1,47 @@
 object caperucita {
-<<<<<<< HEAD
-    var cantidadManzana = 6
-    var peso = 60
 
-    //peso total de capelucita
-    method pesos (){ 
-         return  peso + (cantidadManzana * 0.2)
+    var peso = 60
+    //peso de caperucita
+    method peso (){
+        return peso
     }
-    
+
+
     //canasta varias su peso
     method pierdeUnaManzana(){
-        cantidadManzana = (cantidadManzana -1).max(0)
+        return canasta.pesoActual() - 1.max(0)
         
     }
-    method nuevaCatidad(nuevaCantidad){
-        cantidadManzana = nuevaCantidad
-=======
-    var caperucitaPeso = 60
-    var cantidadManzana = 6
-
+    
     //peso total de capelucita
     method caperucitaPesoTotal (){
-        caperucitaPeso = caperucitaPeso + (cantidadManzana * 0.2)
-        return caperucitaPeso
+        peso = peso + canasta.pesoActual()
+        
     }
     
-    //canasta varias su peso
-    method canastaActual(manzanas){
-        cantidadManzana = manzanas
-        return cantidadManzana
+    
+}
 
->>>>>>> 137275acbf5ecfe797f9a73406ee3a797f05654d
+object canasta {
+    var peso = 0
+    var cantidadDeManzanas = 6
+
+    method manzanasActuales(){
+      return cantidadDeManzanas 
     }
 
+    method cambiarCatidad(cantidadNueva){
+        cantidadDeManzanas = cantidadNueva
+    }
+
+    method pesoActual(){
+        return peso
+    }
+
+    method pesoPorManzanas(){
+        peso = cantidadDeManzanas *0.2
+
+    }
+
+    
 }

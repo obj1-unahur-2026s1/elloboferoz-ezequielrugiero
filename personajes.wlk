@@ -12,9 +12,9 @@ object abuelita {
 
 object cazador {
   method peso() {
-    loboFeroz.sufrirUnaCrisis()
+   loboFeroz.sufrirUnaCrisis()
+   return 0
   }
-
 
   }
 
